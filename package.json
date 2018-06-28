@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "frozor-logger": "latest",
+    "mongoose": "latest"
+  },
+  "description": "Mongoose, but easier to use and faster to set up!",
+  "main": "Database.js",
+  "name": "fast-mongoose",
+  "version": "1.0.2"
+}
