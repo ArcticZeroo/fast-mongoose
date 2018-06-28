@@ -23,6 +23,8 @@ module.exports = {
 module.exports = 'mongodb://user:password@server:port'
 ```
 
+Alternatively, to get the URL you can call `Database.createUrl({ username, password, host, port, database})`
+
 `database.js`
 ```javascript
 const Database = require('fast-mongoose');
