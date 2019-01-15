@@ -6,7 +6,7 @@
   "description": "Mongoose, but easier to use and faster to set up!",
   "main": "Database.js",
   "name": "fast-mongoose",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "devDependencies": {
     "@types/mongoose": "^5.3.7"
   }
