@@ -4,6 +4,7 @@ import { Connection, Model, Mongoose } from 'mongoose';
 export default class Database extends EventEmitter {
     public readonly mongoose: Mongoose;
     public readonly db: Connection;
+    public readonly url: string;
     public schemas: { [key: string]: any };
     public models: { [key: string]: Model<any> };
 

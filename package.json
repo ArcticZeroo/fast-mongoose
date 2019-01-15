@@ -4,7 +4,7 @@
     "mongoose": "^5.4.4"
   },
   "description": "Mongoose, but easier to use and faster to set up!",
-  "main": "Database.js",
+  "main": "index.js",
   "name": "fast-mongoose",
   "version": "1.2.0",
   "devDependencies": {
