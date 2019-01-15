@@ -2,8 +2,6 @@ const EventEmitter = require('events');
 
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-
 class Database extends EventEmitter {
    constructor (url, schemas) {
       super();
@@ -15,12 +13,17 @@ class Database extends EventEmitter {
       this.mongoose = mongoose;
       this.url = url;
 
-      this.isReady = () => (mongoose.connection.readyState === 1);
-
       for (const schemaName of Object.keys(schemas)) {
          const schema = new mongoose.Schema(schemas[schemaName]);
-         this[schemaName] = mongoose.model(schemaName, schema);
+         const model = mongoose.model(schemaName, schema);
+
+         this[schemaName] = model;
+         this.models[schemaName] = model;
       }
+   }
+
+   isReady() {
+      return mongoose.connection.readyState === 1;
    }
 
    connect () {
