@@ -12,6 +12,7 @@ class Database extends EventEmitter {
 
       this.mongoose = mongoose;
       this.url = url;
+      this.models = {};
 
       for (const schemaName of Object.keys(schemas)) {
          const schema = new mongoose.Schema(schemas[schemaName]);
